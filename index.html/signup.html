@@ -5,25 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up-page</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="input-box">
-        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-        <input type="name" required id="name">
-        <label>Name</label>
-      </div>
-    <div class="input-box">
-        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-        <input type="email" required id="email">
-        <label>Email</label>
-      </div>
+  <section id="signup-page">
+    <div class="signup-box">
+      <form action="">
+        <h2>Signup</h2>
       <div class="input-box">
-        <span class="icon"><i class="fa-solid fa-lock"></i></span>
-        <input type="password" required id="password">
-        <label>Password</label>
-      </div>
-
-      <button id="btn">Sign-up</button>
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <input type="name" required id="name">
+          <label>Name</label>
+        </div>
+      <div class="input-box">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <input type="email" required id="email">
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class="fa-solid fa-lock"></i></span>
+          <input type="password" required id="password">
+          <label>Password</label>
+        </div>
+  
+        <button type="submit" id="btn">Sign-up</button>
+        <div class="register-link">
+          <p>Do you have an already account?<a href="login.html">Login</a></p>
+        </div>
+         </form>
+        </div>
+  </section>
       <script type="module" src="sign-up.mjs"></script>
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
