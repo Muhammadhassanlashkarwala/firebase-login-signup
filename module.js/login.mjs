@@ -19,7 +19,7 @@ signInWithEmailAndPassword(auth, email, pass)
         confirmButtonText: 'Go to Dashboard'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = 'home.html'
+            window.location.href = 'index.html'
         }
     })
     // ...

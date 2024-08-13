@@ -2,17 +2,17 @@ import { analytics, app ,auth } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 let btn = document.getElementById("btn")
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (e) => {
+ e.preventDefault();
 let name = document.getElementById('name').value;
 let email = document.getElementById('email').value;
 let pass = document.getElementById('password').value;
 
   
-    createUserWithEmailAndPassword(auth, email, pass)
+    createUserWithEmailAndPassword(auth, email, pass, name)
     .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
-
         // created sweetalert
         Swal.fire({
             title: 'User Sign-up',
@@ -21,7 +21,7 @@ let pass = document.getElementById('password').value;
             confirmButtonText: 'Go to Login'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = 'login.html'
+                window.location.href = 'login.html' ;
             }
         })
         // ...
